@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+     - "80:80"
+    volumes:
+     - .:/www:rw
+     - ./docker/sites-enabled/:/etc/nginx/sites-enabled/:ro
